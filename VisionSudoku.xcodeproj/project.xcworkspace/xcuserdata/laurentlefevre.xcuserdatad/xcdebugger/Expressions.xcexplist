@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #1 in EditedImage.refreshAlteredImage(withDigit:resultGrid:):EditedImage.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.uiImageTreated">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.analyse():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "grid">
+            </PersistentString>
+            <PersistentString
+               value = "casenumber">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ViewController.initAnalyse(updateInterval:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.isBusy">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.initImageToProcess(begin:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "imageToBeProcessedIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ViewController.analyse():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "nIterationTotal">
+            </PersistentString>
+            <PersistentString
+               value = "imageToBeProcessedIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppDelegate.application(_:didFinishLaunchingWithOptions:):AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Int(-7/3)">
+            </PersistentString>
+            <PersistentString
+               value = "-7%3">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ViewController.rectangleFound(rectangleContent:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.processStarted ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.catchText(_:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "alteredImage.modelOutputImage">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

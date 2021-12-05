@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Aiv-pz-imB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Vision Sudoku-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VisionSudoku" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2NA-dG-n4H">
+                                <rect key="frame" x="36" y="277" width="342" height="342"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="342" id="Ay5-iR-Ru7"/>
+                                    <constraint firstAttribute="height" constant="342" id="cLs-lX-rQJ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="qj3-tm-sXF"/>
+                                    <outletCollection property="gestureRecognizers" destination="JKz-i6-0de" appends="YES" id="jvy-3i-7eL"/>
+                                </connections>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5C-Pr-tfE">
+                                <rect key="frame" x="20" y="88" width="374" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Z2Z-c9-drR"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Vision Sudoku">
+                                        <attributes>
+                                            <font key="NSFont" size="30" name="DINAlternate-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wBO-Ge-JOb">
+                                <rect key="frame" x="85" y="326" width="244" height="244"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="244" id="VtH-Hr-kFq"/>
+                                    <constraint firstAttribute="width" constant="244" id="dTP-yE-eNh"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="j5C-Pr-tfE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1Pl-xz-2OC"/>
+                            <constraint firstItem="2NA-dG-n4H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Em-7L-AyI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j5C-Pr-tfE" secondAttribute="trailing" constant="20" id="5j7-Yg-e8L"/>
+                            <constraint firstItem="j5C-Pr-tfE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WuO-pc-36d"/>
+                            <constraint firstItem="2NA-dG-n4H" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fJK-rU-Idw"/>
+                            <constraint firstItem="wBO-Ge-JOb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jbo-Uz-4Li"/>
+                            <constraint firstItem="wBO-Ge-JOb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uyf-GC-uA1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Vision Sudoku" id="Zwe-vl-lMG">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="square.and.arrow.down.on.square" catalog="system" id="3W4-8w-Ajj">
+                            <connections>
+                                <action selector="saveToAlbum:" destination="BYZ-38-t0r" id="Zcm-mQ-jCb"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="magnifyingglass.circle" catalog="system" id="PWz-Ly-q4R">
+                                <connections>
+                                    <segue destination="oxY-Tt-5mO" kind="show" id="SES-zX-j1U"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="play.rectangle.on.rectangle" catalog="system" id="c94-bi-Jp0">
+                                <connections>
+                                    <segue destination="AvQ-l0-ef2" kind="show" id="t6B-4a-oz8"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="hudImage" destination="wBO-Ge-JOb" id="s9t-F6-iRj"/>
+                        <outlet property="infoLabel" destination="j5C-Pr-tfE" id="hxT-kQ-8sU"/>
+                        <outlet property="sceneView" destination="2NA-dG-n4H" id="7uc-cs-9fJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="JKz-i6-0de" userLabel="Tap Scene View">
+                    <connections>
+                        <action selector="startScan:" destination="BYZ-38-t0r" id="el2-kI-0aa"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="jgC-vn-KNa" userLabel="Tap Image View">
+                    <connections>
+                        <action selector="solve:" destination="BYZ-38-t0r" id="RNj-2h-Ceu"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="64.955357142857139"/>
+        </scene>
+        <!--Solve-->
+        <scene sceneID="zVE-Od-Iqp">
+            <objects>
+                <viewController id="AvQ-l0-ef2" customClass="SolveViewController" customModule="VisionSudoku" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WDZ-Hk-fot">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Es-Lz-zzQ">
+                                <rect key="frame" x="42" y="283" width="330" height="330"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5Es-Lz-zzQ" secondAttribute="height" multiplier="1:1" id="K6g-Mu-7GF"/>
+                                    <constraint firstAttribute="height" constant="330" id="WBt-zY-ZtJ"/>
+                                    <constraint firstAttribute="width" constant="330" id="nsX-6U-GBA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XTp-hf-AhK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Es-Lz-zzQ" firstAttribute="centerX" secondItem="WDZ-Hk-fot" secondAttribute="centerX" id="1ts-dk-DmP"/>
+                            <constraint firstItem="5Es-Lz-zzQ" firstAttribute="centerY" secondItem="WDZ-Hk-fot" secondAttribute="centerY" id="GTr-7P-qAq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Solve" id="xgQ-DP-8yn">
+                        <barButtonItem key="rightBarButtonItem" image="play.rectangle.on.rectangle" catalog="system" id="Yto-wH-zH1">
+                            <connections>
+                                <action selector="solveButton:" destination="AvQ-l0-ef2" id="wmI-EU-U5B"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sudokuImage" destination="5Es-Lz-zzQ" id="5hF-mi-gqK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P1A-hV-Yf9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1975.36231884058" y="230.35714285714283"/>
+        </scene>
+        <!--Vision details-->
+        <scene sceneID="gvz-a0-hU5">
+            <objects>
+                <viewController id="oxY-Tt-5mO" customClass="VisionDetailsCollectionViewController" customModule="VisionSudoku" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5LV-p6-IP4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0bG-dt-gEQ">
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g3V-KH-UHY">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellidentifier" id="vnt-m3-57w">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="j57-LB-LIc">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="200" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BcV-Nm-nFr">
+                                                    <rect key="frame" x="14" y="0.0" width="99" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcM-Qh-sDY">
+                                                    <rect key="frame" x="0.0" y="100" width="128" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grj-c4-teF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="66" id="2Yo-nY-P0z"/>
+                                                        <constraint firstAttribute="width" constant="66" id="Qc0-FT-O9i"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="36"/>
+                                                    <color key="textColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="grj-c4-teF" firstAttribute="top" secondItem="j57-LB-LIc" secondAttribute="top" id="KJE-1f-Lqb"/>
+                                                <constraint firstItem="grj-c4-teF" firstAttribute="leading" secondItem="j57-LB-LIc" secondAttribute="leading" id="jZ8-Es-ac3"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="oxY-Tt-5mO" id="Yrz-tt-tv5"/>
+                                    <outlet property="delegate" destination="oxY-Tt-5mO" id="H0q-SR-Hpq"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wLx-Fn-lCu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0bG-dt-gEQ" firstAttribute="leading" secondItem="wLx-Fn-lCu" secondAttribute="leading" constant="20" id="0PK-U7-ECo"/>
+                            <constraint firstItem="wLx-Fn-lCu" firstAttribute="trailing" secondItem="0bG-dt-gEQ" secondAttribute="trailing" constant="20" id="DMU-L5-tFf"/>
+                            <constraint firstItem="0bG-dt-gEQ" firstAttribute="top" secondItem="wLx-Fn-lCu" secondAttribute="top" id="EWB-0F-Nug"/>
+                            <constraint firstItem="0bG-dt-gEQ" firstAttribute="bottom" secondItem="wLx-Fn-lCu" secondAttribute="bottom" id="f1f-HP-4zd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Vision details" id="Xdq-e4-Om5"/>
+                    <connections>
+                        <outlet property="collectionView" destination="0bG-dt-gEQ" id="WAn-AZ-IFO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ytc-36-hpw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1966.6666666666667" y="-451.33928571428567"/>
+        </scene>
+        <!--Vision Sudoku-->
+        <scene sceneID="w4V-Xy-fGS">
+            <objects>
+                <navigationController title="Vision Sudoku" automaticallyAdjustsScrollViewInsets="NO" id="Aiv-pz-imB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aCH-qP-GLD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9sH-lq-aFM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZ4-sb-cp8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="64.955357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass.circle" catalog="system" width="128" height="121"/>
+        <image name="play.rectangle.on.rectangle" catalog="system" width="128" height="97"/>
+        <image name="square.and.arrow.down.on.square" catalog="system" width="122" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
